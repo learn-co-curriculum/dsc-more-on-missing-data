@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Now that you've seen various methods of how to deal with missing data, its time to further discuss how to choose and appropriate methodology given a particular scenario. Commonly, many people will immediately turn to imputing the mean or median of a feature with missing values. This can be valid and effective methodology, hence why it is standard, but does have caveats. For example, doing so will reduce the overall variance of your dataset which should be takend into account when performing subsequent analyses or training a machine learning algorithm on the data set.
+Now that you've seen various methods of how to deal with missing data, its time to further discuss how to choose and appropriate methodology given a particular scenario. Commonly, many people will immediately turn to imputing the mean or median of a feature with missing values. This can be valid and effective methodology, hence why it is standard, but does have caveats. For example, doing so will reduce the overall variance of your dataset which should be taken into account when performing subsequent analyses or training a machine learning algorithm on the data set.
 
 ## Objectives
 
@@ -191,7 +191,7 @@ As you can see, Age and Cabin have a substantial amount of missing values, and E
 
 ## Checking for Duplicates
 
-While `df.info()` is a good initial spot check for missing values, it may not catch more subtle anomolies in the data such as duplicates. While these values are populated, it is always worrisome if we have observation rows with identical data.
+While `df.info()` is a good initial spot check for missing values, it may not catch more subtle anomalies in the data such as duplicates. While these values are populated, it is always worrisome if we have observation rows with identical data.
 
 
 ```python
@@ -463,7 +463,7 @@ duplicates.tail()
 
 ## Checking for extraneous values
 
-Sometimes, null values are even further hidden within a dataset. For example, sometimes an entry such as `999999` is used for missing values, or an arbitrary date such as `12-01-1970` might be set for unknown dates. In general, doing a quick eyeball and previewing the top occuring values for each feature can help further tease out peculiarities in the data set.
+Sometimes, null values are even further hidden within a dataset. For example, sometimes an entry such as `999999` is used for missing values, or an arbitrary date such as `12-01-1970` might be set for unknown dates. In general, doing a quick eyeball and previewing the top occurring values for each feature can help further tease out peculiarities in the data set.
 
 
 ```python
@@ -585,7 +585,7 @@ You can see that we've uncovered another case of missing data that did not show 
 
 ## Choosing a Methodology
 
-Now that you have some ideas of various methods for dealing with missing data, how do you choose which to use? The answer will depend on the scenario and specifics to the application itself. As a general rule of thumb, we tend towards imputing values rather then dropping them, as we wish to use as much information as possible. That said, larger gaps where data is missing can pose more substantial problems, and thereby warrant alternative approaches. We'll take a look at specific cases below in more detail, but here's a quick table of your options.
+Now that you have some ideas of various methods for dealing with missing data, how do you choose which to use? The answer will depend on the scenario and specifics to the application itself. As a general rule of thumb, we tend towards imputing values rather than dropping them, as we wish to use as much information as possible. That said, larger gaps where data is missing can pose more substantial problems, and thereby warrant alternative approaches. We'll take a look at specific cases below in more detail, but here's a quick table of your options.
 
 |         | Continuous          | Categorical  |
 | ------------- |:-------------:| -----:|
@@ -629,7 +629,7 @@ When imputing missing values, keep in mind that you are influencing the distribu
 ## When to Drop Rows
 
 
-Dropping rows is an appropriate choice if there are very few missing values to start with. After all, we do not wish to throw away troves of data if we have it, so cases in which there are larger occurences of missing values, dropping all occurences is typically inadvisable.
+Dropping rows is an appropriate choice if there are very few missing values to start with. After all, we do not wish to throw away troves of data if we have it, so cases in which there are larger occurrences of missing values, dropping all occurrences is typically inadvisable.
 
 ## When to Drop Columns
 
