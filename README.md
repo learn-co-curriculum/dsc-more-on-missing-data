@@ -1,9 +1,8 @@
-
 # More on Missing Data
 
 ## Introduction
 
-Now that you've seen various methods of how to deal with missing data, its time to further discuss how to choose an appropriate methodology given a particular scenario. Commonly, many people will immediately turn to imputing the mean or median of a feature with missing values. This can be a valid and effective methodology, hence why it is standard, but does have caveats. For example, doing so will reduce the overall variance of your dataset which should be taken into account when performing subsequent analyses or training a machine learning algorithm on the dataset.
+While imputing the medan or median are standard methods of dealing with missing values, these standard methods do have caveats. For example, doing so will reduce the overall variance of your dataset which should be taken into account when performing subsequent analyses or training a machine learning algorithm on the dataset.
 
 ## Objectives
 
@@ -149,7 +148,9 @@ pd.plotting.scatter_matrix(df, figsize=(10,10));
 ```
 
 
+    
 ![png](index_files/index_3_0.png)
+    
 
 
 ## Check for missing data
@@ -553,11 +554,11 @@ for col in df.columns:
     
 
 
-You can see that we've uncovered another case of missing data that did not show up before! The `'Pclass'` feature has `?` for roughly 10% of the entries.
+You can see that we've uncovered another case of missing data that did not show up before. The `'Pclass'` feature has `?` for roughly 10% of the entries.
 
 ## Choosing a methodology
 
-Now that you have some ideas of various methods for dealing with missing data, how do you choose which to use? The answer will depend on the scenario and specifics to the application itself. As a general rule of thumb, we tend towards imputing values rather than dropping them, as we wish to use as much information as possible. That said, larger gaps where data is missing can pose more substantial problems, and thereby warrant alternative approaches. We'll take a look at specific cases below in more detail, but here's a quick table of your options.
+How do you choose which method for dealing with missing data to use? The answer will depend on the scenario and specifics to the application itself. As a general rule of thumb, we tend towards imputing values rather than dropping them, as we wish to use as much information as possible. That said, larger gaps where data is missing can pose more substantial problems, and thereby warrant alternative approaches. We'll take a look at specific cases below in more detail, but here's a quick table of your options.
 
 |         | Continuous          | Categorical  |
 | ------------- |:-------------:| -----:|
@@ -615,4 +616,4 @@ subset = df[cols]
 
 ## Summary
 
-In this lesson, we took a look at methods for identifying duplicate data as well as missing data that is not null, but filled with a placeholder value (such as `?`). We also began to discuss considerations when dealing with missing data, which you yourself will further grapple with in the upcoming lab.
+In this lesson, we took a look at methods for identifying duplicate data as well as missing data that is not null, but filled with a placeholder value (such as `?`).
